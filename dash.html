@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Admin</title>
+
+    <link href="css/dash-styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="sb-topnav navbar navbar-expand navbar-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href=""> <img class="logo" src="media/logo/logo.png"> </a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+
+        <!-- Navbar Search-->
+        <div class="logout d-flex mt-2">
+            <p class="me-3">Welcome: Quyet Nguyen</p>
+            <a href="#"><span><i class="fas fa-sign-out-alt"></i></span>Logout</a>
+        </div>
+    </nav>
+
+    <div id="dash">
+        <div id="col-left">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Dashboard</div>
+                        <div class="nav-link" href="">
+                            <div class="sb-nav-link-icon"><i class="fab fa-elementor"></i></div>
+                            Campaign
+                        </div>
+                        <a class="nav-link ms-4" href="">Campaign list</a>
+                        <a class="nav-link ms-4" href="">Sponsor list</a>
+
+                        <a class="nav-link" href="">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
+                            User
+                        </a>
+                        <a class="nav-link ms-4" href="">User list</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div id="col-right">
+            <main>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3">
+                            <div class="box box1">
+                                <div class="boxvalue">
+                                    <p>6</p>
+                                </div>
+                                <div class="boxname">Campaigns</i>
+                                </div>
+                                <div class="boxicon"><i class="far fa-window-restore"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="box box2">
+                                <div class="money">
+                                    <p>+800.000.000</p>
+                                </div>
+                                <div class="boxname">Total money</i>
+                                </div>
+                                <div class="boxicon"><i class="fas fa-hand-holding-usd"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="box box3">
+                                <div class="boxvalue">
+                                    <p>300</p>
+                                </div>
+                                <div class="boxname">Users</i>
+                                </div>
+                                <div class="boxicon"><i class="fas fa-user-friends"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="box box4">
+                                <div class="boxvalue">
+                                    <p>6</p>
+                                </div>
+                                <div class="boxname">Campaigns</i>
+                                </div>
+                                <div class="boxicon"><i class="far fa-window-restore"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid px-4">
+                    <div class="table-heading">
+                        <div>
+                            <h4 class="mt-4">Campaign list</h4>
+                            <ol class="breadcrumb mb-4">
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active">Campaign</li>
+                            </ol>
+                        </div>
+                        <div class="add-button">
+                            <a href="#">
+                                <button class="btn btn-sm btn-outline-secondary"><span><i class="fas fa-plus-circle"></i></span> Add</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-table me-1"></i> Campaign list
+                        </div>
+                        <div class="card-body table-responsive">
+                            <table id="datatablesSimple">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Campaign name</th>
+                                        <th>Start date</th>
+                                        <th>End date</th>
+                                        <th>Target</th>
+                                        <th>Now</th>
+                                        <th>Status</th>
+                                        <th>Control</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Gây quỹ phẫu thuật mang nụ cười cho 20 em hở môi, hàm ếch</td>
+                                        <td>01/10/2021</td>
+                                        <td>30/11/2021</td>
+                                        <td>80.000.000đ</td>
+                                        <td>200.000.000đ</td>
+                                        <td>Đang diễn ra</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Chung tay gây quỹ hỗ trợ chi phí phẫu thuật cho 8 trẻ em nghèo mắc bệnh tim bẩm sinh</td>
+                                        <td>01/10/2021</td>
+                                        <td>30/11/2021</td>
+                                        <td>50.000.000đ</td>
+                                        <td>224.000.000đ</td>
+                                        <td>Đang diễn ra</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Trao tặng “Đĩa cơm từ thiện lớn nhất Việt Nam” cho 1.500 người già và trẻ em</td>
+                                        <td>01/08/2021</td>
+                                        <td>01/11/2021</td>
+                                        <td>100.000.000đ</td>
+                                        <td>150.000.000đ</td>
+                                        <td>Đã kết thúc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>“Trao lạc quan vượt qua nghịch cảnh” cho trẻ em và người già neo đơn tại các mái ấm cùng Trăng Khuyết</td>
+                                        <td>01/10/2021</td>
+                                        <td>30/11/2021</td>
+                                        <td>90.000.000đ</td>
+                                        <td>150.000.000đ</td>
+                                        <td>Đang diễn ra</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>“Tiếp sức đến trường” cho HS và tân SV mồ côi, đặc biệt khó khăn</td>
+                                        <td>01/10/2021</td>
+                                        <td>30/11/2021</td>
+                                        <td>90.000.000đ</td>
+                                        <td>250.000.000đ</td>
+                                        <td>Đang diễn ra</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Tình thương cho em - Ủng hộ trẻ mồ côi vì dịch bệnh</td>
+                                        <td>01/06/2021</td>
+                                        <td>30/09/2021</td>
+                                        <td>250.000.000đ</td>
+                                        <td>250.000.000đ</td>
+                                        <td>Đã kết thúc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>“Tiếp sức đến trường” cho HS và tân SV mồ côi, đặc biệt khó khăn</td>
+                                        <td>01/10/2021</td>
+                                        <td>30/11/2021</td>
+                                        <td>90.000.000đ</td>
+                                        <td>250.000.000đ</td>
+                                        <td>Đang diễn ra</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Tình thương cho em - Ủng hộ trẻ mồ côi vì dịch bệnh</td>
+                                        <td>01/06/2021</td>
+                                        <td>30/09/2021</td>
+                                        <td>250.000.000đ</td>
+                                        <td>250.000.000đ</td>
+                                        <td>Đã kết thúc</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- <div class="fo text-center">
+        <p>© 2021 all rights reserved.</p>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/dash-scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables.js"></script>
+</body>
+
+</html>

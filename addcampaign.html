@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Admin</title>
+
+    <link href="css/dash-styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="sb-topnav navbar navbar-expand navbar-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href=""> <img class="logo" src="media/logo/logo.png"> </a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+
+        <!-- Navbar Search-->
+        <div class="logout d-flex mt-2">
+            <p class="me-3">Welcome: Quyet Nguyen</p>
+            <a href="#"><span><i class="fas fa-sign-out-alt"></i></span>Logout</a>
+        </div>
+    </nav>
+
+    <div id="dash">
+        <div id="col-left">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Dashboard</div>
+                        <div class="nav-link" href="">
+                            <div class="sb-nav-link-icon"><i class="fab fa-elementor"></i></div>
+                            Campaign
+                        </div>
+                        <a class="nav-link ms-4" href="">Campaign list</a>
+                        <a class="nav-link ms-4" href="">Sponsor list</a>
+                        <a class="nav-link" href="">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
+                            User
+                        </a>
+                        <a class="nav-link ms-4" href="">User list</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div id="col-right">
+            <main>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3">
+                            <div class="box box1">
+                                <div class="boxvalue">
+                                    <p>6</p>
+                                </div>
+                                <div class="boxname">Campaigns</i>
+                                </div>
+                                <div class="boxicon"><i class="far fa-window-restore"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="box box2">
+                                <div class="money">
+                                    <p>+800.000.000</p>
+                                </div>
+                                <div class="boxname">Total money</i>
+                                </div>
+                                <div class="boxicon"><i class="fas fa-hand-holding-usd"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="box box3">
+                                <div class="boxvalue">
+                                    <p>300</p>
+                                </div>
+                                <div class="boxname">Users</i>
+                                </div>
+                                <div class="boxicon"><i class="fas fa-user-friends"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="box box4">
+                                <div class="boxvalue">
+                                    <p>6</p>
+                                </div>
+                                <div class="boxname">Campaigns</i>
+                                </div>
+                                <div class="boxicon"><i class="far fa-window-restore"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid px-4">
+                    <div class="table-heading">
+                        <div>
+                            <h4 class="mt-4">Add new campaign</h4>
+                            <ol class="breadcrumb mb-4">
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active">Add</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 addcamp">
+                        <form class="row g-3 p-2">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">Tên chương trình</label>
+                                        <input type="text" class="form-control" id="inputCampName">
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Mô tả chương trình</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-6 mt-1">
+                                        <label for="startdate">Ngày bắt đầu</label>
+                                        <input class="form-control form-control-sm mt-1" type="date" id="startdate">
+                                    </div>
+                                    <div class="col-md-6 mt-1">
+                                        <label for="enddate">Ngày kết thúc</label>
+                                        <input class="form-control form-control-sm mt-1" type="date" id="enddate">
+                                    </div>
+                                    <div class="col-auto mt-4 pt-2">
+                                        <label for="inputCity" class="form-label">Số tiền cần quyên góp</label>
+                                        <input type="text" class="form-control" id="inputCity" placeholder="100000">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-secondary">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/dash-scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables.js"></script>
+</body>
+
+</html>
